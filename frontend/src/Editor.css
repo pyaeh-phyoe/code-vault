@@ -1,0 +1,101 @@
+.wrapper-X {
+    width: 100%;
+    height: calc(100vh - 6rem);
+}
+
+.wrapper-Y {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.wrapper-Y:first-child {
+    width: calc(50% - 8px);
+}
+
+.handler-X {
+    width: 8px;
+    height: 100%;
+    float: left;
+    cursor: ew-resize;
+    background-color: var(--adjacent-color);
+}
+
+.handler-X::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-color);
+}
+
+.handler-YL::before,
+.handler-YR::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    position: absolute;
+    bottom: 0%;
+}
+
+.handler-YL,
+.handler-YR {
+    width: 100%;
+    height: 8px;
+    cursor: ns-resize;
+    position: relative;
+    background-color: var(--adjacent-color);
+}
+
+.editor {
+    height: 50%;
+    font-size: 16px;
+    background-color: var(--adjacent-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-container {
+    overflow-y: scroll;
+}
+
+#editor-preview {
+    height: 100%;
+    width: 100%;
+    border: none;
+}
+
+.iframe {
+    height: calc(50% - 8px);
+    position: relative;
+}
+
+
+.console-resize {
+    width: 100%;
+    height: 4px;
+    cursor: ns-resize;
+    background-color: var(--primary-color);
+}
+
+#YL-bottom {
+    height: calc(50% - 8px);
+}
+
+
+.console-log p {
+    height: 2.25rem;
+    padding: 5px;
+    font-family: monospace;
+    border-bottom: 1px solid var(--border-color);
+}
+
+:root {
+    --primary-color: #060606;
+    --adjacent-color: #272335;
+    --border-color: #2F2F2F;
+    --console-color: #343539;
+}

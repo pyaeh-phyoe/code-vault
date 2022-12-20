@@ -1,0 +1,18 @@
+<!-- <script>window.onerror = function (message, url, line, col, errorObj) {
+        console.log(`${message}
+    ${url}, ${line}:${col}`);
+    };</script>
+<script>function start() { console = { panel: parent.document.querySelector(".console-log"), log: function (m) { if (typeof m === "object") { m = JSON.stringify(m); } let p = document.createElement("p"); p.append(m); this.panel.append(p); }, warn: function (m) { let p = document.createElement("p"); p.style.color = "#fede5d"; p.append(m); this.panel.append(p); }, error: function (m) { let p = document.createElement("p"); p.style.color = "#fe4450"; p.append(m); this.panel.append(p); var myCustomData = { foo: "bar" }; var event = new CustomEvent("myEvent", { detail: myCustomData }); window.parent.document.dispatchEvent(event); } }; }</script>
+<script>start()</script> -->
+
+<style type="text/css"> </style>
+<body> <button>Click</button></body>
+
+<script>
+    try {
+            const button = document.querySelector('button')
+            console.log(button)
+        } catch (error) { console.error(error) 
+        }
+    </script>
+
