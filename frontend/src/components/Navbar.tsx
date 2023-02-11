@@ -41,6 +41,8 @@ const Navbar = ({ title, setTitle, html, css, js }: Props) => {
             })
             console.log(response)
             const json = await response.json()
+        } else {
+            navigate('/login')
         }
     }
 
