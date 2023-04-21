@@ -1,10 +1,12 @@
 const Footer = () => {
     const toggleConsole = () => {
+        const consoleInput = document.querySelector('#console-input') as HTMLElement
         const elem = document.querySelector('#console') as HTMLElement
         const display = getComputedStyle(elem).display
 
         if (display === 'none') {
             elem.style.display = 'block'
+            consoleInput.focus()
         } else {
             elem.style.display = 'none'
         }

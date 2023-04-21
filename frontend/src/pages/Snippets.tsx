@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import SideMenu from '../components/SideMenu';
 import PreviewFrame from '../components/PreviewFrame'
 import LoginButton from '../components/LoginButton'
+import vault from '../assets/vault.svg'
 
 interface Project {
     _id: string;
@@ -73,7 +74,9 @@ const Snippets = () => {
     return (
         <div className='bg-primaryColor  flex flex-col'>
             <nav className='flex justify-between h-16	bg-secondaryColor'>
-                <header></header>
+                <div className='flex items-center'>
+                    <div style={{ backgroundImage: `url(${vault})` }} className='w-12	h-12 bg-cover mx-3'></div>
+                </div>
                 <div className='flex'>
                     <div className='button-type-1' onClick={() => navigate('/')}>
                         <div className='save'>Editor<div></div></div>

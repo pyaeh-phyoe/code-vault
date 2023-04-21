@@ -55,12 +55,14 @@ const Console = () => {
     const toggleConsole = () => {
         const elem = document.querySelector('#console') as HTMLElement
         const display = getComputedStyle(elem).display
+        console.log("hahhahhah")
 
         if (display === 'none') {
             elem.style.display = 'block'
         } else {
             elem.style.display = 'none'
         }
+
     }
 
     const clearConsole = () => {
@@ -68,27 +70,19 @@ const Console = () => {
         consoleOutput.innerHTML = ''
     }
 
-
-// .console-log {
-//     height: 9rem;
-//     overflow-y: scroll;
-//     background-color: var(--adjacent-color);
-//     color: #fff;
-// }
-
     return (
-        <section id='console' className='bottom-0 absolute w-full text-base	'>
+        <section id='console' className='bottom-0 absolute w-full text-base	hidden'>
             <div className='console-resize'></div>
             <section className='flex  items-center bg-secondaryColor h-9 px-1 justify-end	'>
                 <button className='button-type-2' onClick={clearConsole}>Clear</button>
             <button onClick={toggleConsole} className='button-type-2'> X </button>
 
             </section>
-            <section className='console-log h-36	 overflow-y-scroll bg-primaryColor'></section>
-            <div className='flex items-center bg-consoleColor py-1	px-2.5	border-r-8 border-primaryColor	'>
+            <section className='console-log h-16	 overflow-y-scroll bg-primaryColor'></section>
+            <div className='flex items-center bg-consoleColor py-1	px-2.5'>
                 <iframe id='commandline' className='hidden'></iframe>
-                <span className='text-white cursor-default mr-4	'>&gt;</span>
-                <input className='font-[monospace] border-none w-full bg-consoleColor' onKeyUp={consoleInputHandler} />
+                <span className='text-white cursor-default mr-4	'>&gt;_</span>
+                <input id='console-input' className='font-[monospace] border-none w-full bg-consoleColor' onKeyUp={consoleInputHandler} />
             </div>
         </section>
     );

@@ -2,6 +2,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { useAuthContext } from '../hooks/useAuthContext'
 import { useState } from 'react'
 import LoginButton from './LoginButton'
+import vault from '../assets/vault.svg'
 
 interface Props {
     setTitle: any;
@@ -49,6 +50,7 @@ const Navbar = ({ title, setTitle, html, css, js }: Props) => {
     return (
         <nav className='h-16 bg-secondaryColor flex justify-between border border-borderColor'>
             <div className='text-white flex items-center'>
+                <div style={{backgroundImage: `url(${vault})`}} className='w-12	h-12 bg-cover mx-3'></div>
                 {titleEdit ? (
                     <form onSubmit={(e) => {
                         e.preventDefault()
